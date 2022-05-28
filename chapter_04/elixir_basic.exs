@@ -52,3 +52,13 @@ map0 =
   |> IO.inspect()
 
 IO.inspect(map0[{1, 1, 2}])
+
+bin = <<1, 2>>
+IO.inspect(bin)
+
+byte_size(bin)
+|> IO.inspect()
+
+d1 =
+  Date.new(2018, 12, 25)
+  |> IO.inspect()
