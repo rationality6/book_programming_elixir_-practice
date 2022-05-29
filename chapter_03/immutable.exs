@@ -12,5 +12,6 @@ list2 =
 
 name = "elixir"
 cap_name = String.capitalize(name)
+
 IO.inspect(cap_name)
 IO.inspect(name)
