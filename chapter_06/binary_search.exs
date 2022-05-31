@@ -1,23 +1,22 @@
 defmodule Chop do
-  def guess(n, range) do
-    head..tail = range
-    check(n, tail)
+  def guess(answer, low..high = range) do
+    answer_guess = div(low + high, 2)
+    IO.inspect(answer_guess)
+    _check(answer, answer_guess, range)
   end
 
-  def check(n, l) when 0 >= l and n == l do
-    l
+  defp _check(answer, answer_guess, _) when answer == answer_guess do
+    "find #{answer_guess}"
   end
 
-  def check(n, l) when n > l do
-    "커 #{n}"
-    check(n, l / 2)
+  defp _check(answer, answer_guess, _low..high) when answer > answer_guess do
+    guess(answer, (answer_guess + 1)..high)
   end
 
-  # def check(n, l) when n < l do
-  #   "작아 #{n}"
-  #   check(n, l / 2)
-  # end
+  defp _check(answer, answer_guess, low.._high) when answer < answer_guess do
+    guess(answer, low..(answer_guess - 1))
+  end
 end
 
-Chop.guess(273, 1..1000)
+Chop.guess(5, 1..1000)
 |> IO.inspect()
