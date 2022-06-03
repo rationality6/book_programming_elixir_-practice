@@ -1,4 +1,4 @@
-defmodule BookProgrammingElxirPractice.MixProject do
+defmodule BookProgrammingElixirPractice.MixProject do
   use Mix.Project
 
   def project do
