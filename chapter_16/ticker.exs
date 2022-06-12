@@ -24,7 +24,7 @@ defmodule Ticker do
           send(client, {:tick})
         end)
 
-        generator(client)
+        generator(clients)
     end
   end
 end
