@@ -1,6 +1,10 @@
 defmodule Ticker do
-  @interval 2000
+  @interval 3000
   @name :ticker
+
+  def who_am_i do
+    IO.inspect(__MODULE__)
+  end
 
   def start do
     pid = spawn(__MODULE__, :generator, [[]])

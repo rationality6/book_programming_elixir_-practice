@@ -21,10 +21,12 @@ defmodule Chain do
     end
   end
 
-  def run(n) do
+  def timer_run(n) do
     :timer.tc(Chain, :create_processes, [n])
     |> IO.inspect()
   end
 end
 
-Chain.run(1000)
+# Chain.timer_run(100_000)
+
+Chain.create_processes(100_000) |> IO.inspect()

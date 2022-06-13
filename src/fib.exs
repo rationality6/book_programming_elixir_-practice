@@ -5,3 +5,6 @@ defmodule Fib do
 end
 
 # Fib.fib_calc(10) |> IO.inspect()
+
+# :timer.tc(Fib, :fib_calc, [42])
+# |> IO.inspect()
