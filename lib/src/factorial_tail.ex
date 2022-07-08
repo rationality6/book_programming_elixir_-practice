@@ -1,4 +1,4 @@
-defmodule Facto do
+defmodule Src.FactorialTail do
   def tail(n) do
     _factorial_tail_recursion(n, 1)
   end
