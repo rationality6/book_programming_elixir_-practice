@@ -1,4 +1,4 @@
-defmodule FizzBuzz do
+defmodule Src.FizzBuzz do
   defp _fizz_buzz_check(cases) do
     case cases do
       {0, 0, _} -> "FizzBuzz"
@@ -16,6 +16,3 @@ defmodule FizzBuzz do
     Enum.map(start..til, &_fizz_buzz(&1))
   end
 end
-
-# FizzBuzz.run(1, 20)
-# |> IO.inspect()
