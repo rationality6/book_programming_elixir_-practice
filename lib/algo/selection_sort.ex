@@ -20,7 +20,7 @@ defmodule Algo.SelectionSort do
     min([smaller(first, second) | tail])
   end
 
-  defp smaller(e1, e2) do
+  def smaller(e1, e2) do
     if e1 <= e2 do
       e1
     else
