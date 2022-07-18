@@ -24,6 +24,17 @@ defmodule Algo.SelectionSortTest do
     assert result == expact_result
   end
 
+  test "셀렉션 소트 최종 sort 비교 shuffle" do
+    array0 =
+      1..10
+      |> Enum.to_list()
+      |> Enum.shuffle()
+
+    result = array0 |> Algo.SelectionSort.sort()
+    expact_result = array0 |> Enum.sort()
+    assert result == expact_result
+  end
+
   test "smaller" do
     assert Algo.SelectionSort.smaller(1, 2) == 1
     assert Algo.SelectionSort.smaller(2, 1) == 1
