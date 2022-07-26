@@ -1,14 +1,26 @@
 defmodule InsertionSort do
-  def run(list) do
-    do_sort(list)
+  def run(list) when is_list(list) do
+    do_sort(list, [])
   end
 
-  def do_sort([head | rest]) do
-    [head | do_sort(rest)]
+  def do_sort([], acc) do
+    acc
   end
 
-  def do_sort([]) do
-    []
+  def do_sort([head | tail], acc) do
+    after_insert = insert(head, acc)
+    do_sort(tail, after_insert)
+  end
+
+  defp insert(e, []) do
+    [e]
+  end
+
+  defp insert(elem, [min | rest]) do
+    cond do
+      min >= elem -> [elem, min | rest]
+      true -> [min | insert(elem, rest)]
+    end
   end
 end
 
@@ -19,5 +31,5 @@ list0 =
   |> IO.inspect()
 
 list0
-|> Insertion.run()
+|> InsertionSort.run()
 |> IO.inspect()
