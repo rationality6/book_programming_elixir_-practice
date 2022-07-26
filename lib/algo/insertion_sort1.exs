@@ -9,8 +9,8 @@ defmodule Algo.InsertionSort do
   end
 
   def do_sort([head | tail], sorted_list) do
-    inseted = insert(head, sorted_list)
-    do_sort(tail, inseted)
+    inserted = insert(head, sorted_list)
+    do_sort(tail, inserted)
   end
 
   def insert(elem, []) do
