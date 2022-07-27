@@ -12,11 +12,11 @@ defmodule InsertionSort do
     do_sort(tail, after_insert)
   end
 
-  defp insert(e, []) do
+  def insert(e, []) do
     [e]
   end
 
-  defp insert(elem, [min | rest]) do
+  def insert(elem, [min | rest]) do
     cond do
       min >= elem -> [elem, min | rest]
       true -> [min | insert(elem, rest)]

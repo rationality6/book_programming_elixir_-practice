@@ -3,11 +3,11 @@ defmodule Algo.SelectionSort do
     do_selection(list, [])
   end
 
-  def do_selection([head | []], acc) do
+  defp do_selection([head | []], acc) do
     acc ++ [head]
   end
 
-  def do_selection(list, acc) do
+  defp do_selection(list, acc) do
     min = min(list)
     do_selection(:lists.delete(min, list), acc ++ [min])
   end
