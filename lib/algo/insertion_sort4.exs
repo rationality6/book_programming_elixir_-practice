@@ -1,14 +1,14 @@
 defmodule InsertionSort4 do
   def run(list) do
-    do_sort(list, [])
+    do_sort([], list)
   end
 
-  def do_sort([], acc) do
+  def do_sort(acc, []) do
     acc
   end
 
-  def do_sort([head | tail], acc) do
-    do_sort(insert(acc, head), acc)
+  def do_sort(acc, [head | tail]) do
+    do_sort(insert(acc, head), tail)
   end
 
   def insert([], element) do
