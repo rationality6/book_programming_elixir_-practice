@@ -1,6 +1,6 @@
 # mix run -e 'ElixirNotepad.run()'
 # mix run -e 'ElixirNotepad.httpoison_test()'
-defmodule ElixirNotepad do
+defmodule ElixirNotepad.Poison do
   @heroku_url "http://httparrot.herokuapp.com/get"
 
   def run() do
