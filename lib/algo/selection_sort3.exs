@@ -1,4 +1,4 @@
-defmodule SelectionSort do
+defmodule Algo.SelectionSort do
   def run(list) when Kernel.is_list(list) do
     do_select(list, [])
   end
@@ -45,16 +45,16 @@ shuffled_list =
   |> Enum.shuffle()
   |> IO.inspect()
 
-# SelectionSort.smaller(1,2) |> IO.inspect()
-# SelectionSort.smaller(2,1) |> IO.inspect()
-# SelectionSort.smaller(3,4) |> IO.inspect()
+# Algo.SelectionSort.smaller(1,2) |> IO.inspect()
+# Algo.SelectionSort.smaller(2,1) |> IO.inspect()
+# Algo.SelectionSort.smaller(3,4) |> IO.inspect()
 
 shuffled_list
-|> SelectionSort.run()
+|> Algo.SelectionSort.run()
 |> IO.inspect()
 
 # List.delete([1, 2, 3, 4, 5], 4) |> IO.inspect()
 
 # [1, 2, 3, 4, 5]
-# |> SelectionSort.list_delete(5)
+# |> Algo.SelectionSort.list_delete(5)
 # |> IO.inspect()

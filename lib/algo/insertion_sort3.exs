@@ -1,4 +1,4 @@
-defmodule InsertionSort do
+defmodule Algo.InsertionSort do
   def run(list) when is_list(list) do
     do_sort(list, [])
   end
@@ -31,5 +31,5 @@ list0 =
   |> IO.inspect()
 
 list0
-|> InsertionSort.run()
+|> Algo.InsertionSort.run()
 |> IO.inspect()

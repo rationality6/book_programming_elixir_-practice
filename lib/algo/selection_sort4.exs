@@ -1,4 +1,4 @@
-defmodule SelectionSort do
+defmodule Algo.SelectionSort do
   def perform(list) when is_list(list) do
     do_select(list, [])
   end
@@ -44,11 +44,11 @@ list0 =
   |> IO.inspect()
 
 list0
-|> SelectionSort.perform()
+|> Algo.SelectionSort.perform()
 |> IO.inspect()
 
 # [1,2,3,4,5,6]
-# |> SelectionSort.delete_list(6)
+# |> Algo.SelectionSort.delete_list(6)
 # |> IO.inspect()
-# |> SelectionSort.delete_list(1)
+# |> Algo.SelectionSort.delete_list(1)
 # |> IO.inspect()

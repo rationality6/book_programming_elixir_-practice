@@ -1,4 +1,4 @@
-defmodule Algo.InsertionSort4 do
+defmodule Algo.InsertionSort5 do
   def run(list) do
     do_sort([], list)
   end
@@ -15,11 +15,12 @@ defmodule Algo.InsertionSort4 do
     [element]
   end
 
-  def insert([head | rest], element) do
-    cond do
-      head >= element -> [element | [head | rest]]
-      true -> [head | insert(rest, element)]
-    end
+  def insert([head | tail], element) when element <= head do
+    [element | [head | tail]]
+  end
+
+  def insert([head | tail], element) do
+    [head | insert(tail, element)]
   end
 end
 
@@ -30,5 +31,5 @@ list0 =
   |> IO.inspect()
 
 list0
-|> Algo.InsertionSort4.run()
+|> Algo.InsertionSort5.run()
 |> IO.inspect()
