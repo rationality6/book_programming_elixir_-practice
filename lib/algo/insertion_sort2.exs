@@ -1,4 +1,4 @@
-defmodule InsertionSort do
+defmodule Algo.InsertionSort do
   def run(list) when is_list(list) do
     [head | rest] = list
     do_sort([head], rest)
@@ -24,5 +24,5 @@ end
 1..10
 |> Enum.to_list()
 |> Enum.shuffle()
-|> InsertionSort.run()
+|> Algo.InsertionSort.run()
 |> IO.inspect()

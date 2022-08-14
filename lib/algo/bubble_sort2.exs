@@ -1,4 +1,4 @@
-defmodule Swap do
+defmodule Algo.Swap do
   @doc """
   큰순으로 스왑
   """
@@ -6,7 +6,7 @@ defmodule Swap do
   def perform(a, b) when a > b, do: [b, a]
 end
 
-defmodule Bubble do
+defmodule Algo.Bubble do
   def run(list) when is_list(list) do
     do_sort(list, [])
     |> make_pass(list)
@@ -29,7 +29,7 @@ defmodule Bubble do
   end
 
   def do_sort([head, second | rest], acc) do
-    [new_first, new_second] = Swap.perform(head, second)
+    [new_first, new_second] = Algo.Swap.perform(head, second)
     do_sort([new_second | rest], acc ++ [new_first])
   end
 end
@@ -41,5 +41,5 @@ list0 =
   |> IO.inspect()
 
 list0
-|> Bubble.run()
+|> Algo.Bubble.run()
 |> IO.inspect()

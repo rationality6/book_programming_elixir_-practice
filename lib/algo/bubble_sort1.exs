@@ -1,9 +1,9 @@
-defmodule Swap do
+defmodule Algo.Swap do
   def perform(a, b) when a <= b, do: [a, b]
   def perform(a, b) when a > b, do: [b, a]
 end
 
-defmodule Bubble do
+defmodule Algo.Bubble do
   def run(list) do
     do_sort(list, [])
     |> make_pass(list)
@@ -19,7 +19,7 @@ defmodule Bubble do
   def do_sort([], _acc), do: []
   def do_sort([first | []], acc), do: acc ++ [first]
   def do_sort([first | [second | rest]], acc) do
-    [new_first, new_second] = Swap.perform(first, second)
+    [new_first, new_second] = Algo.Swap.perform(first, second)
     do_sort([new_second | rest], acc ++ [new_first])
   end
 end

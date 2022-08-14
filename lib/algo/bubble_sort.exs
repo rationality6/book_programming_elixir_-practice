@@ -1,4 +1,4 @@
-defmodule BubbleSort do
+defmodule Algo.BubbleSort do
   def run(list) when is_list(list) do
     do_sort(list, [])
     |> make_pass(list)
@@ -34,8 +34,8 @@ end
 |> Enum.to_list()
 |> Enum.shuffle()
 |> IO.inspect()
-|> BubbleSort.run()
+|> Algo.BubbleSort.run()
 |> IO.inspect()
 
-# BubbleSort.swap_to_smaller(1, 5) |> IO.inspect()
-# BubbleSort.swap_to_smaller(5, 2) |> IO.inspect()
+# Algo.BubbleSort.swap_to_smaller(1, 5) |> IO.inspect()
+# Algo.BubbleSort.swap_to_smaller(5, 2) |> IO.inspect()

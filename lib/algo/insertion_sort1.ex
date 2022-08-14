@@ -1,4 +1,4 @@
-defmodule Algo.InsertionSort do
+defmodule Algo.InsertionSort1 do
   def run(list) do
     [head | tail] = list
     do_sort(tail, [head])
@@ -28,6 +28,6 @@ defmodule Algo.InsertionSort do
   end
 end
 
-# [1, 2, 100, 3, 4, 1, 200, 45, 6, 10]
-# |> Algo.InsertionSort.run()
-# |> IO.inspect()
+[1, 2, 100, 3, 4, 1, 200, 45, 6, 10]
+|> Algo.InsertionSort1.run()
+|> IO.inspect()

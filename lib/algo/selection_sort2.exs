@@ -1,4 +1,4 @@
-defmodule SelectionSort do
+defmodule Algo.SelectionSort do
   def run(list) do
     select(list, [])
   end
@@ -38,5 +38,5 @@ array0 =
   |> Enum.shuffle()
   |> IO.inspect()
 
-SelectionSort.run(array0)
+Algo.SelectionSort.run(array0)
 |> IO.inspect()
