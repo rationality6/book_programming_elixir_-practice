@@ -26,7 +26,3 @@ defmodule Algo.InsertionSort do
     end
   end
 end
-
-[1, 4, 2, 3, 1, 200, 45, 6, 10]
-|> Algo.InsertionSort.sort()
-|> IO.inspect()
